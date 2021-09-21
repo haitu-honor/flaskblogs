@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {# jinja2语法：
+        (1）{% ...%}用于循环或判断语句。
+        (2）{{...}}用于表达式的值的引用。
+        (3）模板引擎的注释
+    #}
+    <div style="width: 30opx; height: 600px; border: solid 2px red;
+    text-align: center; padding: 20px; line-height: 20px">
+        {# 使用{{ }}引用模板变量，也可以进行基本运算，判断，循环等 #}
+        <span>你的登录账号为: {{session.get('username')}}</span><br/>
+        <span>这篇文章的标题: {{article.title}}</span><br/>
+        <span>文章的阅读次数:{{article.count + 1}}</span><br/>
+
+        {# 判断语句 #}
+        {% if count % 2 == 0 %}
+        <span>count可以被2整除，是偶数</span><br/><br/>
+        {% else %}
+        <span>count不可以被2整除，是奇数</span><br/><br/>
+        {% endif %}
+
+        {% set loop = count / 10 %}  {# 通过set来定义运算的变量，loop的值为10.0，是float类型 #}
+        {# 强制转换float为int型，jinja2模板页面不能直接调用Python的内置函数int(loop)进行强转，要使用过滤器  #}
+        {% set intloop = loop | int %}  {# 使用过滤器将loop强制转换为int型 ==> 等同于int(loop),过滤器的方法还有很多，自行百度 #}
+        {# 循环语句 #}
+        {% for i in range(intloop) %}
+        <span>当前循环到第{{i}}行</span><br/>
+        {% endfor %}
+
+        {# jinja2模板页面不能直接调用Python的内置函数，但是可以调用在python模块中自定义的函数 #}
+        {{mytype}}<br/>
+        {{mytype['2']}}<br/>
+
+    </div>
+</body>
+</html>

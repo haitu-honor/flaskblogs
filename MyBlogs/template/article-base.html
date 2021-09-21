@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="col-sm-9 col-12" style="border: none; padding: 0px">
+            <!--  文章内容  -->
+            <div class="col-12 row read-title">
+                <div class="col-9 left-title">Flask作为目前最流行的Python</div>
+                <div class="col-3 right-title">
+                    <label><img src="/icon/icons/heart-fill.svg" ></span> 收藏本文</label>
+                </div>
+                <div class="col-12 author">作者：不二&nbsp;&nbsp;&nbsp;类别：Python开发&nbsp;&nbsp;&nbsp;
+                        日期：2021-03-26 13:31:36&nbsp;&nbsp;&nbsp;阅读：100 次&nbsp;&nbsp;&nbsp;消耗积分：5 分</div>
+                <div class="col-12" style="border: solid 1px #333333;"></div>
+                <div class="col-12 content">
+                    关于网络安全方面的培训，马特里卡实验室拥有五大优势：<br/>
+
+                    1.配置了交换机、防火墙、服务器、日志审计、数据库审计、堡垒机等各种网络基础设备及安全设备，用于搭建配套的实战教学环境。<br/>
+
+                    2.拥有专门的网络安全业务线，把业务线上正在做或已经做完的面向B端市场的项目（涵盖党政、公安、金融、医疗、军工、网信、运营商、腾讯安全、恒安嘉新、广州凌晨等业务领域及企业），嵌入到实际教学过程中让学生去参与实战。<br/>
+
+                    3.课程能够涵盖复杂企业级网络安全建设实战，网络常用攻击分析与防御实践，协议攻击分析及防范实践，应用攻击原理分析及防御实践，OWASP漏洞验证实践，安全加固与日志分析实战等等核心知识和技术的，并且能形成整体实战项目。<br/>
+
+                    4.拥有技术过硬、业务精通的网络安全精英团队，团队成员拥有平均15年的行业经验。<br/>
+
+                    5.敢于承诺参训学员学出来转正后最低月薪8K，66天未就业全额退款。<br/>
+                </div>
+            </div>
+            <!--  上一篇下一篇  -->
+            <div class="col-12 row read-title">
+                <p class="col-12" style="padding-top: 15px;">版权所有，转载本站文章请注明出处：蜗牛学院在线课堂， http://www.woniuxy.com/note/697</p>
+                <p class="col-12">上一篇： <a href="#">资讯:蜗牛创想参与的《网络流量安全分析师》团体标准正式发布啦！</a></p>
+                <p class="col-12">下一篇： <a href="#">访谈:打造网安尖兵！马特里卡联手启明星辰开展实操课程</a></p>
+            </div>
+            <!--  文章的评论  -->
+            <div class="col-12 row read-title">
+                <div class="col-12 row nickname" style="padding-top: 15px; font-weight: bold">
+                    <div class="col-2">
+                        <label for="nickname" style="line-height: 30px">你的昵称：</label>
+                    </div>
+                    <div class="col-10" >
+                        <input type="text" id="nickname" class="form-control" placeholder="匿名用户" />
+                    </div>
+                </div>
+                <div class="col-12 row comment" style="padding-top: 15px; padding-bottom: 15px; font-weight: bold">
+                    <div class="col-2">
+                        <label for="comment" style="line-height: 50px">你的评论：</label>
+                    </div>
+                    <div class="col-10">
+                        <textarea id="comment" class="form-control" ></textarea>
+                    </div>
+                </div>
+                <div class="col-12 row">
+                    <div class="col-12" style="text-align: right; padding-bottom: 15px;">
+                        <button class="btn btn-primary">发表评论</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!-- 按需引入右边栏 -->
+    {% include 'side.html' %}
+
+{% endblock %}

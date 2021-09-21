@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-12" style="text-align: center; padding-top:20px">
+    <img src="/img/404.png"/>
+</div>
+
+{# 三秒后自动跳转回主页 #}
+<script>
+    setTimeout(function(){
+        location.href = '/article'
+    }, 3000)
+</script>
+
+
+{% endblock %}

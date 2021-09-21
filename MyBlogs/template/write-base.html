@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- 初始化富文本 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('content',{
+        initialFrameHeight: 400,
+        autoHeightEnabled: false
+    });
+
+</script>
+
+<!--  富文本编辑器  -->
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <div class="col-12">文章标题
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-12">
+                <script id="content" type="text/plain"></script>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
